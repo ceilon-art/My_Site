@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       </Head>
 
       <main>
-
+        <p>Olá Mundo</p>
       </main>
     </>
   )
