@@ -38,7 +38,7 @@ export default createGlobalStyle`
     list-style-type: none;
     text-transform: uppercase;
     font-family: 'Anton', Helvetica, Arial;
-    font-size: 20px;
+    font-size: 30px;
   }
   a {
     text-decoration:none;
