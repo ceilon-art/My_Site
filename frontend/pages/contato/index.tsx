@@ -3,7 +3,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { FaGithub, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
-import FotoPerfil from '../../assets/foto_perfil.png';
 import {
   Container,
   SocialMedia,
@@ -121,43 +120,27 @@ const Contato: React.FC = () => {
   return (
     <Container>
       <Contact>
-        <img src={FotoPerfil} alt="" />
+        <img src='/foto_perfil.jpeg' alt="" />
         <SocialMedia>
           <CopyToClipBoard>
-            <GrMail size={30} />
-            <p id="clipboard">bergholz.daniel@gmail.com</p>
+            <GrMail size={30} color="#272727" />
+            <p id="clipboard">andreluizkanaan222@gmail.com</p>
           </CopyToClipBoard>
           <a
-            href="https://www.linkedin.com/in/daniel-gobbi-bergholz-752379149"
+            href="https://www.linkedin.com/in/andr%C3%A9-luiz-321a241a4/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin size={30} />
-            <p>Daniel Gobbi Bergholz</p>
+            <p>André Luiz</p>
           </a>
           <a
-            href="https://www.github.com/danielbergholz"
+            href="https://github.com/ceilon-art"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub size={30} />
-            <p>danielbergholz</p>
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCnmbV9eyMwIl50Ji1ObFxqg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaYoutube size={30} />
-            <p>Daniel Berg</p>
-          </a>
-          <a
-            href="https://www.instagram.com/berg.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram size={30} />
-            <p>@berg.dev</p>
+            <p>ceilon-art</p>
           </a>
         </SocialMedia>
       </Contact>

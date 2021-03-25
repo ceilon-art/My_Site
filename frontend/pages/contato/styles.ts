@@ -12,6 +12,7 @@ export const Container = styled.div`
   text-align: center;
   animation: loadAnimation;
   animation-duration: 500ms;
+
   h1 {
     margin-top: 60px;
     margin-bottom: 15px;
@@ -22,19 +23,27 @@ export const Contact = styled.div`
   display: flex;
   place-content: center;
   margin-top: 40px;
+
   a {
     margin-top: 6px;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: #272727;
   }
+
   p {
     margin-left: 8px;
     font-size: 24px;
+    color: #272727;
   }
+
   img {
     margin-right: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
   }
+
   @media (max-width: 700px) {
     img {
       display: none;
@@ -46,6 +55,7 @@ export const SocialMedia = styled.div`
   display: flex;
   flex-direction: column;
   place-content: center;
+
   @media (max-width: 700px) {
     p {
       font-size: 20px;
@@ -67,18 +77,22 @@ export const Form = styled.form<FormProps>`
     border-radius: 6px;
     font-size: 16px;
   }
+
   input::placeholder,
   textarea::placeholder {
     color: #ababab;
   }
+
   br + input {
     margin-top: 6px;
   }
+
   textarea {
     resize: none;
     margin-top: 6px;
     height: 200px;
   }
+
   button {
     margin: 15px 0;
     font-family: 'Anton', Helvetica, Arial;
@@ -101,15 +115,18 @@ export const Form = styled.form<FormProps>`
             opacity: 1;
           `}
   }
+
   button:hover {
     background-color: #d4ae8b;
   }
+
   @media (max-width: 950px) {
     input,
     textarea {
       width: 500px;
     }
   }
+
   @media (max-width: 700px) {
     input,
     textarea {

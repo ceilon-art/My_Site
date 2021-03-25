@@ -1,4 +1,10 @@
-import React, { createContext, useState, useCallback, useContext } from 'react';
+import React, { 
+  createContext, 
+  useState, 
+  useCallback, 
+  useEffect, 
+  useContext 
+} from 'react';
 
 interface ThemeContextData {
   theme: 'light' | 'dark';
@@ -10,26 +16,29 @@ interface ThemeContextData {
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 
 export const ThemeProvider: React.FC = ({ children }) => {
+  const [chosedTheme, setChosedTheme] = useState<'light' | 'dark'>();
   const [lockScroll, setLockScroll] = useState(false);
+  const [theme, setTheme] = useState(chosedTheme);
 
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    const chosedTheme = localStorage.getItem('@bergdaniel:theme');
+  useEffect(() => {
+    function fetchTheme() {
+      const theme = localStorage.getItem('@andre:theme');
+      // @ts-ignore
+      setChosedTheme(theme);
+    } 
 
-    if (!chosedTheme) {
-      localStorage.setItem('@bergdaniel:theme', 'dark');
-      return 'dark';
-    }
-
-    return chosedTheme as 'light' | 'dark';
-  });
+    fetchTheme()
+  }, [])
 
   const changeTheme = useCallback(() => {
     if (theme === 'dark') {
       setTheme('light');
-      localStorage.setItem('@bergdaniel:theme', 'light');
+      localStorage.setItem('@andre:theme', 'light');
+      console.log(theme);
     } else {
       setTheme('dark');
-      localStorage.setItem('@bergdaniel:theme', 'dark');
+      localStorage.setItem('@andre:theme', 'dark');
+      console.log(theme)
     }
   }, [theme]);
 

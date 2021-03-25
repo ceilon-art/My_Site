@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import { Container, Project, Text } from './styles';
 import Button from '../../components/Button';
-import berg from '../../assets/berg.png';
-import astroMuri from '../../assets/astro_muri.png';
-import upwork from '../../assets/upwork.png';
-import logoBgRoxo from '../../assets/logo_bg_roxo.png';
-import bossaBox from '../../assets/bossabox.jpeg';
 
 const Portfolio: React.FC = () => {
   return (
@@ -28,7 +23,7 @@ const Portfolio: React.FC = () => {
       <p>Projetos</p>
 
       <Project>
-        <img src={bossaBox} alt="BossaBox" />
+        <img src="/bossabox.jpeg" alt="BossaBox" />
         <Text>
           <strong>
             - Função:
@@ -50,51 +45,7 @@ const Portfolio: React.FC = () => {
       </Project>
 
       <Project>
-        <img src={upwork} alt="Upwork" />
-        <Text>
-          <strong>
-            - Função:
-            <span> Desenvolvedor Fullstack</span>
-          </strong>
-          <br />
-          <strong>
-            - Descrição:
-            <span> Estou disponível como freelancer na plataforma Upwork.</span>
-          </strong>
-
-          <Button link="https://www.upwork.com/o/profiles/users/~01d7d71fa714d6ce9d/">
-            Ver mais
-          </Button>
-        </Text>
-      </Project>
-
-      <Project>
-        <img src={astroMuri} alt="Astro Muri" />
-        <Text>
-          <strong>
-            - Função:
-            <span> Desenvolvedor Frontend</span>
-          </strong>
-          <br />
-          <strong>
-            - Descrição:
-            <span>
-              {' '}
-              Ricardo Muri é um astrólogo famoso e influencer, e “Astro Muri” é
-              um aplicativo mobile híbrido que faz streaming do seu conteúdo. Eu
-              desenvolvi tudo relacionado à tela de login, o processo de
-              pagamento (usando o pagseguro), e conectei todas as páginas ao
-              backend (firebase).
-            </span>
-          </strong>
-          <Link to="/portfolio/astromuri">
-            <Button>Ver mais</Button>
-          </Link>
-        </Text>
-      </Project>
-
-      <Project>
-        <img src={berg} alt="BERG" />
+        <img src="/foto_perfil.jpeg" alt="BERG" />
         <Text>
           <strong>
             - Função:
@@ -111,14 +62,14 @@ const Portfolio: React.FC = () => {
               React.
             </span>
           </strong>
-          <Link to="/portfolio/bergdaniel">
+          <Link href="/portfolio/bergdaniel">
             <Button>Ver mais</Button>
           </Link>
         </Text>
       </Project>
 
       <Project>
-        <img src={logoBgRoxo} alt="BERG" />
+        <img src="/bossabox.jpeg" alt="BERG" />
         <Text>
           <strong>
             - Função:

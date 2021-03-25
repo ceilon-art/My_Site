@@ -8,7 +8,7 @@ const Cursos: React.FC = () => {
     <Container>
       <p>Cursos gratuitos</p>
       <CourseList>
-        <Course>
+        {/* <Course>
           <Link
             to={{
               pathname: '/cursos/javascript',
@@ -69,7 +69,7 @@ const Cursos: React.FC = () => {
             </Thumbnail>
           </Link>
           <span> Curso de Trello</span>
-        </Course>
+        </Course> */}
         <Course>
           <Thumbnail id="thumbnail">
             <p> em breve</p>

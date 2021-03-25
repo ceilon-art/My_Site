@@ -48,9 +48,9 @@ const NavBar: React.FC = () => {
         </MenuIcon>
         <ul>
           {theme === 'dark' ? (
-            <FiSun size={28} color="#D4AE8B" onClick={changeTheme} />
-          ) : (
             <FaMoon size={22} color="#D4AE8B" onClick={changeTheme} />
+            ) : (
+            <FiSun size={28} color="#D4AE8B" onClick={changeTheme} />
           )}
           <li>
             <Link href="/cursos">
