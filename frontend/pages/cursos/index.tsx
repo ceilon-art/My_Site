@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Container, Course, Thumbnail, CourseList, Gold } from './styles';
+import { Container, Course, Thumbnail, CourseList, Gold } from '../../styles/cursosStyles';
 
 const Cursos: React.FC = () => {
   return (

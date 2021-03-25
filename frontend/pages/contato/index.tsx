@@ -9,7 +9,7 @@ import {
   CopyToClipBoard,
   Contact,
   Form,
-} from './styles';
+} from '../../styles/contatoStyles';
 
 const Contato: React.FC = () => {
   const [loading, setLoading] = useState(0);

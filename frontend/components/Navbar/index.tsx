@@ -3,7 +3,7 @@ import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 import Link from 'next/link';
 
-import { useTheme } from '../../../context/theme';
+import { useTheme } from '../../context/theme';
 import { Background, Container, MenuIcon, MenuBar } from './styles';
 
 const NavBar: React.FC = () => {
