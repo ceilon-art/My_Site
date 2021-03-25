@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8000",
     "build": "next build",
     "start": "next start"
   },
@@ -14,6 +14,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-toastify": "^7.0.3",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
