@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import { Container, Project, Text } from './styles';
-import Button from '../../components/Button';
+import Button from '../components/Button';
 
 const Portfolio: React.FC = () => {
   return (
