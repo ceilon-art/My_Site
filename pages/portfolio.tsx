@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 import { Container, Project, Text } from '../styles/portfolioStyles';
 import Button from '../components/Button';

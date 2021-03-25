@@ -53,8 +53,8 @@ const NavBar: React.FC = () => {
             <FiSun size={28} color="#D4AE8B" onClick={changeTheme} />
           )}
           <li>
-            <Link href="/cursos">
-              <p onClick={(): void => handleNewTab(2)}>cursos</p>
+            <Link href="/sobre">
+              <p onClick={(): void => handleNewTab(2)}>sobre mim</p>
             </Link>
           </li>
           <li>
