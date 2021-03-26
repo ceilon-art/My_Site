@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppProps } from 'next/app';
 import GlobalStyle from '../styles/globals';
-import { ThemeProvider, useTheme } from '../context/theme';
+import { ThemeProvider } from 'styled-components';
 import Navbar from '../components/Navbar';
+import { ThemeName, themes } from '../styles/themes';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const { theme, lockScroll } = useTheme();
+  const [themeName, setThemeName] = useState<ThemeName>("light");
+  const currentTheme = themes[themeName];
 
   return (
   <>
-    <ThemeProvider>
-      <GlobalStyle theme={theme} lock={lockScroll} />
-      <div>
-        <Navbar />
-        <Component {...pageProps} />
-      </div>
+    <ThemeProvider theme={currentTheme}>
+      <Navbar themeName={themeName} setThemeName={setThemeName} />
+
+      <Component {...pageProps} />
+
+      <GlobalStyle />
     </ThemeProvider>
   </>
 )}

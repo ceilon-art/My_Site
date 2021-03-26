@@ -3,37 +3,33 @@ import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 import Link from 'next/link';
 
-import { useTheme } from '../../context/theme';
 import { Background, Container, MenuIcon, MenuBar } from './styles';
+import { ThemeName } from '../../styles/themes';
 
-const NavBar: React.FC = () => {
+interface Props {
+  themeName: ThemeName;
+  setThemeName: (newName: ThemeName) => void;
+}
+
+const NavBar: React.FC<Props> = ({ themeName, setThemeName }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [tab, setTab] = useState<number>(0);
-
-  const { changeTheme, theme, lock } = useTheme();
 
   const handleOpen = useCallback(
     (close = false): void => {
       if (close) {
         setOpen(false);
         setTab(0);
-        lock(false);
       } else {
         setOpen(!open);
-        lock(true);
       }
     },
-    [open, lock],
+    [open],
   );
 
-  const handleNewTab = useCallback(
-    (n: number): void => {
-      setOpen(false);
-      setTab(n);
-      lock(false);
-    },
-    [lock],
-  );
+  function toggleTheme() {
+    setThemeName(themeName === "light" ? "dark" : "light");
+  }
 
   return (
     <Background>
@@ -47,24 +43,24 @@ const NavBar: React.FC = () => {
           <MenuBar />
         </MenuIcon>
         <ul>
-          {theme === 'dark' ? (
-            <FaMoon size={22} color="#D4AE8B" onClick={changeTheme} />
+          {themeName === 'dark' ? (
+            <FiSun size={28} color="#D4AE8B" onClick={toggleTheme} />
             ) : (
-            <FiSun size={28} color="#D4AE8B" onClick={changeTheme} />
+            <FaMoon size={22} color="#D4AE8B" onClick={toggleTheme} />
           )}
           <li>
             <Link href="/sobre">
-              <p onClick={(): void => handleNewTab(2)}>sobre mim</p>
+              <p>sobre mim</p>
             </Link>
           </li>
           <li>
             <Link href="/portfolio">
-              <p onClick={(): void => handleNewTab(3)}>portfolio</p>
+              <p>portfolio</p>
             </Link>
           </li>
           <li>
             <Link href="/contato">
-              <p onClick={(): void => handleNewTab(4)}>contato</p>
+              <p>contato</p>
             </Link>
           </li>
         </ul>

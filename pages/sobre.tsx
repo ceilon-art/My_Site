@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Container, Project, Text } from '../styles/sobreStyles';
-import Button from '../components/Button';
 
 const Portfolio: React.FC = () => {
   return (

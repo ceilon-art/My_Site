@@ -1,19 +1,7 @@
-import { 
-  createGlobalStyle, 
-  css,
-  FlattenSimpleInterpolation
- } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import 'react-toastify/dist/ReactToastify.css';
-
-interface GlobalStyleProps {
-  lock: boolean;
-  theme: 'light' | 'dark';
-}
-
-const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
-   *{
+export default createGlobalStyle`
+  * {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -27,12 +15,13 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 
   html, body, #root {
     height:100%;
+    min-height: 100%;
+    background: var(--primary);
   }
 
-  body{
-    -webkit-font-smoothing: antialiased !important;
-    transition: background-color 300ms;
-    overflow: ${(props): string => (props.lock === true ? 'hidden' : 'auto')};
+  html {
+    min-height: 100%;
+    background: var(--primary);
   }
 
   body, input, button {
@@ -46,7 +35,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   }
 
   svg {
-    cursor: pointer
+    cursor: pointer;
   }
 
   ul {
@@ -55,6 +44,19 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 
   h1 {
     font-family: 'Anton', Helvetica, Arial;
+    color: var(--black);
+  }
+
+  p {
+    color: var(--black);
+  }
+
+  textarea ,button, input {
+    border: 0;
+    background: none;
+    font-family: -apple-system, BLinkMacSystemFont, Segoe, UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    color: var(--black);
+    transition: color .3s ease-out;
   }
 
   li {
@@ -68,30 +70,19 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   a {
     text-decoration:none;
   }
-  
-  @keyframes loadAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity:1
-    }
+
+  ul {
+    list-style: none;
   }
 
-  ${(props): FlattenSimpleInterpolation => 
-    props.theme === "dark" ? css `
-      body {
-        background-color: #444444;
-        color: #fafafa;
-      }
-    ` 
-    : css `
-      body {
-        background-color: #f0f0f0;
-        color: #272727;
-      }
-    `
+  :root {
+    ${(props) => {
+      const theme = props.theme;
+      let append = "";
+      Object.entries(theme).forEach(([prop, value]) => {
+        append += `--${prop}: ${value};`;
+      });
+      return append;
+    }}
   }
 `;
-
-export default GlobalStyle;
