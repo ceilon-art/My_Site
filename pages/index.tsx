@@ -1,12 +1,10 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import Navbar from '../components/Navbar';
 import { Container, Hello, Section, SocialMedia } from '../styles/indexStyles';
 
 const Home: React.FC = () => {
   return (
     <>
-      <Navbar />
       <Container>
         <Hello>
           <img src="/foto_perfil.jpeg" alt="" />

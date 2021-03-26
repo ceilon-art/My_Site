@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import { FaGithub, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 
 import {

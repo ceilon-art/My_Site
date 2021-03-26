@@ -2,6 +2,7 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import GlobalStyle from '../styles/globals';
 import { ThemeProvider, useTheme } from '../context/theme';
+import Navbar from '../components/Navbar';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const { theme, lockScroll } = useTheme();
@@ -10,7 +11,10 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   <>
     <ThemeProvider>
       <GlobalStyle theme={theme} lock={lockScroll} />
-      <Component {...pageProps} />
+      <div>
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
     </ThemeProvider>
   </>
 )}
