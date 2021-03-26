@@ -47,12 +47,12 @@ export default createGlobalStyle`
     color: var(--black);
   }
 
-  p {
+  p, strong, span {
     color: var(--black);
   }
 
   textarea ,button, input {
-    border: 0;
+    border: 1px solid #ccc;
     background: none;
     font-family: -apple-system, BLinkMacSystemFont, Segoe, UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     color: var(--black);

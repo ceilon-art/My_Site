@@ -28,13 +28,12 @@ export const Contact = styled.div`
     margin-top: 6px;
     display: flex;
     align-items: center;
-    color: #272727;
   }
 
   p {
     margin-left: 8px;
     font-size: 24px;
-    color: #272727;
+    color: var(--black);
   }
 
   img {
@@ -66,7 +65,10 @@ export const SocialMedia = styled.div`
 export const CopyToClipBoard = styled.div`
   display: flex;
   align-items: center;
-  color: #fff;
+
+  p {
+    color: var(--black);
+  }
 `;
 
 export const Form = styled.form<FormProps>`
@@ -80,7 +82,7 @@ export const Form = styled.form<FormProps>`
 
   input::placeholder,
   textarea::placeholder {
-    color: #ababab;
+    color: var(--black);
   }
 
   br + input {

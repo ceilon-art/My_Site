@@ -34,7 +34,6 @@ export const themes = {
       orange: '#fff',
   
       header: '#181818',
-      logo: '#fff',
       username: '#9b9b9b',
       search: '#151515',
       'search-placeholder': '#c6c6c6',

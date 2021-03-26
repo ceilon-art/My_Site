@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
+// import {} from '../'
 
 import {
   Container,
@@ -123,7 +124,7 @@ const Contato: React.FC = () => {
         <img src='/foto_perfil.jpeg' alt="" />
         <SocialMedia>
           <CopyToClipBoard>
-            <GrMail size={30} color="#272727" />
+            <GrMail size={30} color="var(--black)" />
             <p id="clipboard">andreluizkanaan222@gmail.com</p>
           </CopyToClipBoard>
           <a
@@ -131,7 +132,7 @@ const Contato: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin size={30} />
+            <FaLinkedin size={30} color="var(--black)" />
             <p>André Luiz</p>
           </a>
           <a
@@ -139,7 +140,7 @@ const Contato: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub size={30} />
+            <FaGithub size={30} color="var(--black)" />
             <p>ceilon-art</p>
           </a>
         </SocialMedia>
