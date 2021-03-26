@@ -1,8 +1,10 @@
 import React, { useCallback, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
-// import {} from '../'
+import emailjs from 'emailjs-com';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
   Container,
@@ -34,8 +36,8 @@ const Contato: React.FC = () => {
       formData.subject === '' ||
       formData.description === ''
     ) {
-      toast('📝 Favor preencher todos os campos', {
-        position: 'top-center',
+      toast(" 📝 Favor preencher todos os campos" , {
+        position: "top-center",
         autoClose: 4000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -43,11 +45,12 @@ const Contato: React.FC = () => {
         draggable: true,
         progress: undefined,
         bodyStyle: {
-          fontFamily: 'Roboto',
+          fontFamily: "Roboto",
           fontSize: 18,
           color: '#272727',
         },
       });
+
       return;
     }
 
@@ -64,11 +67,7 @@ const Contato: React.FC = () => {
 
     setLoading(1);
 
-    fetch('https://formspree.io/xlepnwwb', {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: JSON.stringify(formData),
-    })
+    emailjs.sendForm('gmailMessage', 'template_vxb6exl', event.target, 'user_HwYWgjGHChHGe7g2VStma')
       .then((response) => {
         if (response.status === 200) {
           toast.success('🚀 E-mail enviado com sucesso!', {
@@ -113,50 +112,51 @@ const Contato: React.FC = () => {
           progress: undefined,
           bodyStyle: { fontFamily: 'Roboto', fontSize: 20 },
         });
-
         setLoading(0);
       });
   }, []);
 
   return (
-    <Container>
-      <Contact>
-        <img src='/foto_perfil.jpeg' alt="" />
-        <SocialMedia>
-          <CopyToClipBoard>
-            <GrMail size={30} color="var(--black)" />
-            <p id="clipboard">andreluizkanaan222@gmail.com</p>
-          </CopyToClipBoard>
-          <a
-            href="https://www.linkedin.com/in/andr%C3%A9-luiz-321a241a4/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={30} color="var(--black)" />
-            <p>André Luiz</p>
-          </a>
-          <a
-            href="https://github.com/ceilon-art"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={30} color="var(--black)" />
-            <p>ceilon-art</p>
-          </a>
-        </SocialMedia>
-      </Contact>
-      <Form onSubmit={onHandleSubmit} loading={loading}>
-        <h1>Entre em contato</h1>
-        <input type="text" name="name" placeholder="Nome" />
-        <br />
-        <input type="email" name="email" placeholder="E-mail" />
-        <br />
-        <input type="text" name="subject" placeholder="Assunto" />
-        <br />
-        <textarea name="description" placeholder="Descrição" cols={120} />
-        <br />
-        <button type="submit">enviar</button>
-      </Form>
+    <>
+      <Container>
+        <Contact>
+          <img src='/foto_perfil.jpeg' alt="" />
+          <SocialMedia>
+            <CopyToClipBoard>
+              <GrMail size={30} color="var(--black)" />
+              <p id="clipboard">andreluizkanaan222@gmail.com</p>
+            </CopyToClipBoard>
+            <a
+              href="https://www.linkedin.com/in/andr%C3%A9-luiz-321a241a4/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={30} color="var(--black)" />
+              <p>André Luiz</p>
+            </a>
+            <a
+              href="https://github.com/ceilon-art"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={30} color="var(--black)" />
+              <p>ceilon-art</p>
+            </a>
+          </SocialMedia>
+        </Contact>
+        <Form onSubmit={onHandleSubmit} loading={loading}>
+          <h1>Entre em contato</h1>
+          <input type="text" name="name" placeholder="Nome" />
+          <br />
+          <input type="email" name="email" placeholder="E-mail" />
+          <br />
+          <input type="text" name="subject" placeholder="Assunto" />
+          <br />
+          <textarea name="description" placeholder="Descrição" cols={120} />
+          <br />
+          <button type="submit">enviar</button>
+        </Form>
+      </Container>
       <ToastContainer
         position="top-center"
         autoClose={4000}
@@ -168,7 +168,7 @@ const Contato: React.FC = () => {
         draggable
         pauseOnHover
       />
-    </Container>
+    </>
   );
 };
 

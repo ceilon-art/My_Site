@@ -16,6 +16,7 @@ export default createGlobalStyle`
   html, body, #root {
     height:100%;
     min-height: 100%;
+    transition: background-color 400ms;
     background: var(--primary);
   }
 
@@ -52,7 +53,7 @@ export default createGlobalStyle`
   }
 
   textarea ,button, input {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     background: none;
     font-family: -apple-system, BLinkMacSystemFont, Segoe, UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     color: var(--black);
@@ -73,6 +74,15 @@ export default createGlobalStyle`
 
   ul {
     list-style: none;
+  }
+
+  @keyframes loadAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity:1
+    }
   }
 
   :root {
