@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 80vw;
-  margin: 0 auto;
+  margin: 100px auto;
   animation: loadAnimation;
   animation-duration: 500ms;
 
@@ -19,7 +19,8 @@ export const Hello = styled.div`
   flex-direction: column;
 
   h1 {
-    font-size: 70px;
+    font-size: 65px;
+    text-transform: uppercase;
   }
 
   img {
@@ -33,6 +34,7 @@ export const Hello = styled.div`
     h1 {
       font-size: 40px;
       margin-left: 30px;
+      text-align: center;
     }
   }
 `;
@@ -80,3 +82,4 @@ export const SocialMedia = styled.div`
     }
   }
 `;
+

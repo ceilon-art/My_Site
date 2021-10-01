@@ -6,9 +6,12 @@ interface ContainerProps {
 }
 
 export const Background = styled.div`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #272727;
   color: #fff;
+  width: 100%;
   
   a {
     color: #fff;
@@ -87,6 +90,21 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  @media (max-width: 950px) {
+    ul {
+      margin-left: 35px;
+    }
+
+    h1{ 
+      font-size: 25px;
+    }
+
+    p{
+      font-size: 22px;
+      width: 90px;
+    }
   }
 
   @media (max-width: 700px) {

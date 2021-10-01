@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Container, Hello, Section, SocialMedia } from '../styles/indexStyles';
+import WhatsApp from '../components/WhatsApp'
 
 const Home: React.FC = () => {
   return (
@@ -8,12 +9,15 @@ const Home: React.FC = () => {
       <Container>
         <Hello>
           <img src="/foto_perfil.jpeg" alt="" />
-          <h1>Olá!</h1>
+          <h1>Transformando suas ideias em realidade!</h1>
         </Hello>
         <Section>
           <p>
-          Meu nome é André Luiz , sou Desenvolvedor Fullstack com foco nas
-          tecnologias: React JS, NextJs, Laravel, Django e Node JS
+            Nos destacamos por ser uma equipe de profissionais 
+            dedicados e altamente qualificados, que se esforçam 
+            para atender às suas necessidades em todo o cenário digital,
+            oferecendo serviços especializados por meio de uma ampla 
+            gama de serviços.
           </p>
           <SocialMedia>
             <a
@@ -44,6 +48,7 @@ const Home: React.FC = () => {
           </SocialMedia>
         </Section>
       </Container>
+      <WhatsApp />
     </>
   );
 };

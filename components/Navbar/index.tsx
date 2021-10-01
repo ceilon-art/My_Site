@@ -35,7 +35,7 @@ const NavBar: React.FC<Props> = ({ themeName, setThemeName }) => {
     <Background>
       <Container tab={tab} isOpen={open}>
         <Link href="/">
-          <h1 onClick={(): void => handleOpen(true)}>André Luiz</h1>
+          <h1 onClick={(): void => handleOpen(true)}>Kanaan Solutions</h1>
         </Link>
         <MenuIcon onClick={(): void => handleOpen()} isOpen={open} tab={tab}>
           <MenuBar />
@@ -50,7 +50,12 @@ const NavBar: React.FC<Props> = ({ themeName, setThemeName }) => {
           )}
           <li>
             <Link href="/sobre">
-              <p>sobre mim</p>
+              <p>serviços</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/sobre">
+              <p>sobre nós</p>
             </Link>
           </li>
           <li>

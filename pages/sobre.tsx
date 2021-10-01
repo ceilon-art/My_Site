@@ -1,4 +1,5 @@
 import React from 'react';
+import WhatsApp from '../components/WhatsApp';
 import { Container, Project, Text } from '../styles/sobreStyles';
 
 const Portfolio: React.FC = () => {
@@ -159,6 +160,7 @@ const Portfolio: React.FC = () => {
           </strong>
         </Text>
       </Project>
+      <WhatsApp />
     </Container>
   );
 };

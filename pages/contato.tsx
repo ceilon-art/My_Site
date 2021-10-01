@@ -6,6 +6,8 @@ import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import WhatsApp from '../components/WhatsApp'
+
 import {
   Container,
   SocialMedia,
@@ -168,6 +170,7 @@ const Contato: React.FC = () => {
         draggable
         pauseOnHover
       />
+      <WhatsApp />
     </>
   );
 };

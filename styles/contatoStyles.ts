@@ -6,7 +6,7 @@ interface FormProps {
 
 export const Container = styled.div`
   width: 80vw;
-  margin: 0 auto;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
   text-align: center;
