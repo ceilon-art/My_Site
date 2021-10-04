@@ -1,165 +1,43 @@
 import React from 'react';
 import WhatsApp from '../components/WhatsApp';
-import { Container, Project, Text } from '../styles/sobreStyles';
+import { Container } from '../styles/sobreStyles';
 
 const Portfolio: React.FC = () => {
   return (
     <Container>
-      <p>André Luiz</p>
-        <span>
-          {' '}
-          Meu nome é André Luiz, tenho 22 anos, sou estudante 
-          de Sistemas de Informação pela Universidade Anhembi Morumbi.
-          Atualmente trabalho como analista de suporte técnico na Força Aérea 
-          Brasileira e, também, realizo trabalhos freelancer como desenvolvedor
-          web e mobile, focado nas ferramentas Laravel, ReactJs, React Native,
-          NodeJs e Django.
-        </span>
+      <h1>Sobre Nós</h1>
 
-      <p>Experiências Profissionais</p>
+      <p>
+        A Kanaan Solutions nasceu de uma paixão imensa que temos
+        por programação e soluções tecnológicas no geral. A vontade 
+        de criar e trazer resultados para empresas dos mais diversos 
+        ramos, nos fez ter a iniciativa de criar nossa empresa de 
+        soluções tecnológicas, tendo em mente a clara ideia de que
+        entraríamos para o mercado com o intuito de se destacar em
+        todos os tipos de serviços que prestarmos.
+      </p>
+      
+      <p>
+        Com essa ideia em mente, trabalhamos, arduamente, para te
+        proporcionar o melhor resultado, atendendo a todas às suas 
+        necessidades. Nós trabalhamos focando todas as nossas energias 
+        em entregar o melhor resultado para o cliente, no menor espaço de 
+        tempo possível, de modo a não perder a qualidade e a sofisticação 
+        do projeto. Prezamos pelo atendimento, por isso temos uma equipe 
+        especializada para garantir a você um atendimento de ponta, com baixo
+        tempo de espera e ótimo conhecimento técnico sobre o assunto.
+      </p>
 
-      <Project>
-        <Text>
-          <strong>
-            - Função:
-            <span> Analista de Suporte Técnico Júnior</span>
-          </strong>
-          <br />
-          <strong>
-            - Empresa:
-            <span> Força Aérea Brasileira</span>
-          </strong>
-          <br />
-          <strong>
-            - Descrição:
-            <span>
-              {' '}
-              Responsável pelo(a):
-              Gerenciamento SGBD da unidade militar,
-              Suporte aos problemas de redes,
-              Manutenção de Hardwares e Softwares dos computadores,
-              Gerenciamento de permissões de contas de usuários com Active
-              Directory e, Gerenciamento do CMS Joomla, atualizando todos 
-              os conteúdos no site local.
-            </span>
-          </strong>
-        </Text>
-      </Project>
+      <p>   
+        Nosso trabalho é te proporcionar a melhor experiência possível,
+        dessa forma, damos nosso máximo para que você receba muito mais do
+        que você espera. 
+      </p>
 
-      <Project>
-        <Text>
-          <strong>
-            - Função:
-            <span> Desenvolvedor React Native/Expo Júnior</span>
-          </strong>
-          <br />
-          <strong>
-            - Empresa:
-            <span>
-              {' '}
-              Fashionshop Consultoria de Desenvolvimentos e Gestão Empresarial
-            </span>
-          </strong>
-          <br />
-          <strong>
-            - Descrição:
-            <span>
-              {' '}
-              Desenvolvedor React Native/Expo, responsável pela criação de todo
-              o aplicativo mobile da empresa Fashionshop, utilizando ferramentas
-              como React Redux, Redux Saga, Context Manager, React Navigation, 
-              Typescript e entra outras ferramentas.
-            </span>
-          </strong>
-        </Text>
-      </Project>
-
-      <p>Cursos Complementares</p>
-
-      <Project>
-        <Text>
-          <strong>
-            - Curso:
-            <span>{' '} Desenvolvimento JavaScript e TypeScript</span>
-          </strong>
-          <br />
-          <strong>
-            - Instituição:
-            <span>
-            {' '}
-              Udemy
-            </span>
-          </strong>
-        </Text>
-      </Project>
-
-      <Project>
-        <Text>
-          <strong>
-            - Curso:
-            <span>{' '} Desenvolvedor Fullstack ReactJs e NodeJs</span>
-          </strong>
-          <br />
-          <strong>
-            - Instituição:
-            <span>
-            {' '}
-            Rocketseat
-            </span>
-          </strong>
-        </Text>
-      </Project>
-
-      <Project>
-        <Text>
-          <strong>
-            - Curso:
-            <span>{' '} MySQL do básico ao avançado</span>
-          </strong>
-          <br />
-          <strong>
-            - Instituição:
-            <span>
-            {' '}
-            Udemy
-            </span>
-          </strong>
-        </Text>
-      </Project>
-
-      <Project>
-        <Text>
-          <strong>
-            - Curso:
-            <span>{' '} Desenvolvedor Fullstack Laravel</span>
-          </strong>
-          <br />
-          <strong>
-            - Instituição:
-            <span>
-            {' '}
-            Udemy
-            </span>
-          </strong>
-        </Text>
-      </Project>
-
-      <Project>
-        <Text>
-          <strong>
-            - Curso:
-            <span>{' '} Python do básico ao avançado</span>
-          </strong>
-          <br />
-          <strong>
-            - Instituição:
-            <span>
-            {' '}
-            Udemy
-            </span>
-          </strong>
-        </Text>
-      </Project>
+      <p>
+        <strong>Esse é o nosso trabalho e faremos o possível e impossível
+        para te garantir isso</strong>         
+      </p>
       <WhatsApp />
     </Container>
   );
