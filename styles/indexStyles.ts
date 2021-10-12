@@ -29,12 +29,13 @@ export const Hello = styled.div`
     border-radius: 50%;
   }
 
-  @media (max-width: 450px) {
-    margin-top: 80px;
+  @media (max-width: 750px) {
+    margin-top: 100px;
+    align-items: center;
+    
     h1 {
       font-size: 40px;
       margin-left: 30px;
-      text-align: center;
     }
   }
 `;
@@ -62,9 +63,11 @@ export const SocialMedia = styled.div`
   a {
     display: flex;
     color: #000;
+    align-items: center;
 
     p {
       margin-left: 8px;
+      font-family: 'Anton', Arial, Helvetica, sans-serif;
     }
 
     img {

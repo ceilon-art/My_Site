@@ -122,27 +122,19 @@ const Contato: React.FC = () => {
     <>
       <Container>
         <Contact>
-          <img src='/foto_perfil.jpeg' alt="" />
+          <img src='/Logo.png' alt="" />
           <SocialMedia>
             <CopyToClipBoard>
               <GrMail size={30} color="var(--black)" />
-              <p id="clipboard">andreluizkanaan222@gmail.com</p>
+              <p id="clipboard">solutionskanaan@gmail.com</p>
             </CopyToClipBoard>
             <a
-              href="https://www.linkedin.com/in/andr%C3%A9-luiz-321a241a4/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={30} color="var(--black)" />
-              <p>André Luiz</p>
-            </a>
-            <a
-              href="https://github.com/ceilon-art"
+              href="https://github.com/kanaan-solutions"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub size={30} color="var(--black)" />
-              <p>ceilon-art</p>
+              <p>kanaan-solutions</p>
             </a>
           </SocialMedia>
         </Contact>

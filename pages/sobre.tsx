@@ -38,6 +38,7 @@ const Portfolio: React.FC = () => {
         <strong>Esse é o nosso trabalho e faremos o possível e impossível
         para te garantir isso</strong>         
       </p>
+      
       <WhatsApp />
     </Container>
   );

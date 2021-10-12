@@ -12,15 +12,15 @@ const Portfolio: React.FC = () => {
         <Project 
           imageName="/bossabox.jpeg" 
           altName="BossaBox"
-          functionName="Desenvolveodr Fullstack"
+          functionName="Desenvolvedor Fullstack"
           description="Estou disponível como freelancer na plataforma Bossabox."
           linkName="https://app.bossabox.com/u/andre-nagano"
         />
 
         <Project 
-          imageName="/foto_perfil.jpeg" 
+          imageName="/Logo.png" 
           altName="André Luiz"
-          functionName="Desenvolveodr Fullstack"
+          functionName="Desenvolvedor Fullstack"
           description="ceilon.vercel.app é o site que você está acessando. Eu o criei do
           completo zero usando ferramentas como NextJs, Figma e Typescript como
           linguagem."
@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
         <Project 
           imageName="/bossabox.jpeg" 
           altName="VUTTUR"
-          functionName="Desenvolveodr Fullstack"
+          functionName="Desenvolvedor Fullstack"
           description="Desenvolvimento do app VUTTR (Very Useful
             to Remember). Neste app utilizei NextJs no
             frontend, AdonisJs no backend e Typescript 
@@ -43,7 +43,7 @@ const Portfolio: React.FC = () => {
         <Project 
           imageName="/netflix.jpg" 
           altName="Netflix"
-          functionName="Desenvolveodr Frontend"
+          functionName="Desenvolvedor Frontend"
           description="Um clone da Netflix, um pouco diferente, utilizando 
           TypeScript, ReactJs e outras ferramentas super 
           interessantes para dar um destaque na aplicação. Todo 
@@ -56,7 +56,7 @@ const Portfolio: React.FC = () => {
         <Project 
           imageName="/github.png" 
           altName="GitHub"
-          functionName="Desenvolveodr Frontend"
+          functionName="Desenvolvedor Frontend"
           description="Um clone do GitHub, utilizando 
           TypeScript e ReactJs. Nesse projeto 
           é possível pesquisar por outros usuários 
@@ -68,7 +68,7 @@ const Portfolio: React.FC = () => {
         <Project 
           imageName="/youtube.png" 
           altName="Youtube"
-          functionName="Desenvolveodr Frontend"
+          functionName="Desenvolvedor Frontend"
           description="Um clone do Youtube, utilizando 
           ReactJs e CSS puro. Nesse projeto 
           fizemos um clone, simples, da interface

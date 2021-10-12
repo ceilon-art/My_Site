@@ -64,15 +64,9 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   li:nth-child(${(props): number => props.tab}) a {
     color: #bb9878;
   }
-
-	h1 {
-		text-transform: uppercase;
-		color: #bb9878;
-	}
 
   p {
     text-transform: uppercase;
@@ -140,4 +134,28 @@ export const Container = styled.div<ContainerProps>`
       margin-left: 0;
     }
   }
+`;
+
+export const Logo = styled.div `
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  width: 200px;
+  justify-content: left;
+  align-items: center;
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+	h1 {
+		text-transform: uppercase;
+		color: #bb9878;
+    margin-left: 15px;
+    cursor: pointer;
+	}
 `;

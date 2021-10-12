@@ -3,7 +3,7 @@ import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 import Link from 'next/link';
 
-import { Background, Container, MenuIcon, MenuBar } from './styles';
+import { Background, Container, Logo, MenuIcon, MenuBar } from './styles';
 import { ThemeName } from '../../styles/themes';
 
 interface Props {
@@ -34,9 +34,17 @@ const NavBar: React.FC<Props> = ({ themeName, setThemeName }) => {
   return (
     <Background>
       <Container tab={tab} isOpen={open}>
-        <Link href="/">
-          <h1 onClick={(): void => handleOpen(true)}>Kanaan Solutions</h1>
-        </Link>
+        <Logo>
+          <Link href="/">
+            <img 
+              onClick={(): void => handleOpen(true)}
+              src="Logo.png"
+            />
+          </Link>
+          <Link href="/">
+            <h1>Kanaan Solutions</h1>
+          </Link>
+        </Logo>
         <MenuIcon onClick={(): void => handleOpen()} isOpen={open} tab={tab}>
           <MenuBar />
           <MenuBar />

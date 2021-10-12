@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import { Container, Hello, Section, SocialMedia } from '../styles/indexStyles';
 import WhatsApp from '../components/WhatsApp'
 
@@ -8,12 +8,12 @@ const Home: React.FC = () => {
     <>
       <Container>
         <Hello>
-          <img src="/foto_perfil.jpeg" alt="" />
+          <img src="/Logo.png" alt="" />
           <h1>Transformando suas ideias em realidade!</h1>
         </Hello>
         <Section>
           <p>
-            Nos destacamos por ser uma equipe de profissionais 
+            Nos destacamos por sermos uma equipe de profissionais 
             dedicados e altamente qualificados, que se esforçam 
             para atender às suas necessidades em todo o cenário digital,
             oferecendo serviços especializados por meio de uma ampla 
@@ -21,29 +21,21 @@ const Home: React.FC = () => {
           </p>
           <SocialMedia>
             <a
-                href="https://app.bossabox.com/u/andre-nagano"
+                href="https://www.instagram.com/kanaan_solutions/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img src="bossabox.jpeg" />
-                <p>André Nagano</p>
+                <FaInstagram size={56} />
+                <p>@kanaan_solutions</p>
             </a>
 
             <a
-                href="https://www.workana.com/freelancer/b58fdc5ad8638ed1a3a3e84d617022d4?ref=user_dropdown"
+                href="https://github.com/kanaan-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img src="/workana.png" />
-                <p>André Luiz</p>
-            </a>
-            <a
-                href="https://github.com/ceilon-art"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FaGithub size={36} />
-                <p>ceilon-art</p>
+                <FaGithub size={56} />
+                <p>kanaan-solutions</p>
             </a>
           </SocialMedia>
         </Section>
